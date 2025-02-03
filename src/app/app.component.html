@@ -1,0 +1,19 @@
+<h1>{{"Title: " +title}}</h1>
+<div class="container">
+  <h1>User list</h1>
+  <div class="user-list">
+    <div [ngClass]="user.isActive?'user-active':'user-inactive'" class="user-item" *ngFor="let user of users">
+      <div><img class="user-image" [src]="user.image" alt=""></div>
+      <div class="user-details">
+        <span class="user-name">{{user.name}}</span>
+        <span class="user-email">{{user.email}}</span>
+        <span [ngStyle]="{color:user.isActive?'green':'red'}" class="user-status">{{user.isActive?'Active':'Inactive'}}</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<router-outlet />
