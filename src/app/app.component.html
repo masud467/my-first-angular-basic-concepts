@@ -1,41 +1,24 @@
-<h1>{{"Title: " +title}}</h1>
 <div class="container">
-  <h1>User list</h1>
-  <div class="user-list">
-    <div [ngClass]="user.isActive?'user-active':'user-inactive'" class="user-item" *ngFor="let user of users">
-      <div><img class="user-image" [src]="user.image" alt=""></div>
-      <div class="user-details">
-        <span class="user-name">{{user.name}}</span>
-        <span class="user-email">{{user.email}}</span>
-        <span [ngStyle]="{color:user.isActive?'green':'red'}" class="user-status">{{user.isActive?'Active':'Inactive'}}</span>
-      </div>
-
+  <div class="title">
+    <h1>Latest Blog Post</h1>
+  </div>
+  <div class="blog-post">
+    <div *ngFor="let blog of blogs">
+      <app-blog-post (onLikeEvent)="onLikeCount($event)" [blog]="blog"></app-blog-post>
     </div>
   </div>
-
 </div>
 
-<!-- ngIf use case -->
-<div *ngIf="blogs.length;then listBlog else noBlog" >
-  
+<div class="container">
+  <div class="title">
+    <h1>featured Post</h1>
+  </div>
+  <div class="blog-post">
+    <div *ngFor="let blog of featureBlogs">
+      <app-blog-post (onLikeEvent)="onLikeCount($event)" [blog]="blog"></app-blog-post>
+    </div>
+  </div>
 </div>
-<ng-template  #listBlog>
-  <div class="blog">list of blogs</div>
-</ng-template>
-<ng-template #noBlog>
-  <div class="no-blog">
-    blogs not  found
-  </div>
-</ng-template>
-
- <!-- hidden -->
-  <!-- <div [hidden]="!blogs.length" class="blog">
-    list of blog post
-  </div>
-  <div [hidden]="blogs.length" class="no-blog">
-    no post found
-  </div> -->
-
 
 
 <router-outlet />
