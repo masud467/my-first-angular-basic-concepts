@@ -15,5 +15,27 @@
 
 </div>
 
+<!-- ngIf use case -->
+<div *ngIf="blogs.length;then listBlog else noBlog" >
+  
+</div>
+<ng-template  #listBlog>
+  <div class="blog">list of blogs</div>
+</ng-template>
+<ng-template #noBlog>
+  <div class="no-blog">
+    blogs not  found
+  </div>
+</ng-template>
+
+ <!-- hidden -->
+  <!-- <div [hidden]="!blogs.length" class="blog">
+    list of blog post
+  </div>
+  <div [hidden]="blogs.length" class="no-blog">
+    no post found
+  </div> -->
+
+
 
 <router-outlet />

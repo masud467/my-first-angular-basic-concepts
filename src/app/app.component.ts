@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IUser } from './user.modal';
-import { NgClass, NgFor, NgStyle } from '@angular/common';
+import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgFor,NgStyle,NgClass],
+  imports: [RouterOutlet, NgFor,NgStyle,NgClass,NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -36,5 +36,8 @@ export class AppComponent {
       isActive:true
     }
   ]
+
+  // ngIf use case
+  blogs=['blog1','blog2','blog3']
   
 }
