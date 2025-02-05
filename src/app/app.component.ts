@@ -1,3 +1,4 @@
+import { ChildComponent } from './child/child.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor } from '@angular/common';
@@ -7,7 +8,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgFor,BlogPostComponent],
+  imports: [RouterOutlet, NgFor,BlogPostComponent, ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
