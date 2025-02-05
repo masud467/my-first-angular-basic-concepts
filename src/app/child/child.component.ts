@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import { GrandSonComponent } from '../grand-son/grand-son.component';
 
 @Component({
@@ -9,7 +9,7 @@ import { GrandSonComponent } from '../grand-son/grand-son.component';
 })
 export class ChildComponent implements OnInit, AfterViewInit{
   ngAfterViewInit():void{
-    console.log(this.child);
+    this.child.map(x=>console.log(x))
   }
   ngOnInit():void{
     console.log(this.calender);
@@ -21,9 +21,11 @@ export class ChildComponent implements OnInit, AfterViewInit{
 @ViewChild('calender',{read:ElementRef,static:true}) calender!:ElementRef;
 @ViewChild('input',{read:ElementRef,static:true}) input!:ElementRef;
 
-@ViewChild(GrandSonComponent) child!:GrandSonComponent;
+// @ViewChild(GrandSonComponent) child!:GrandSonComponent;
+@ViewChildren(GrandSonComponent) child!:QueryList<GrandSonComponent>;
 
 add(){
-  this.child.increment();
+  // this.child.increment()
+  this.child.map(x=>x.increment());
 }
 }
