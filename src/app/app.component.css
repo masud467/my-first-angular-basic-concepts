@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+#password-strength{
+  background-color:#ccc;
+  height: 5px;
+  width: 100%;
+  display: block;
+  width: 175px;
+  margin-top: 10px;
+
+}
+
+#password-strength span {
+  display: block;
+  height: 5px;
+  border-radius: 2px;
+  transition: all 500ms ease;
+}
+
+.strength-1 span { 
+  /* weak password */
+  background-color: red;
+  width: 10%;
+}
+
+.strength-2 span {
+  /* medium password */
+  background-color: orange;
+  width: 25%;
+}
+
+
+
+.strength-3 span {
+  /* strong password */
+  background-color: green;
+  width: 100%;
+}

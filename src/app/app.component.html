@@ -1,24 +1,13 @@
 <div class="container">
-  <div class="title">
-    <h1>Latest Blog Post</h1>
-  </div>
-  <div class="blog-post">
-    <div *ngFor="let blog of blogs">
-      <app-blog-post (onLikeEvent)="onLikeCount($event)" [blog]="blog"></app-blog-post>
-    </div>
-  </div>
+  <h1>parent component</h1>
+<button (click)="toggle()">Show</button>
+<app-child *ngIf="isChild"></app-child>
 </div>
 
 <div class="container">
-  <div class="title">
-    <h1>featured Post</h1>
-  </div>
-  <div class="blog-post">
-    <div *ngFor="let blog of featureBlogs">
-      <app-blog-post (onLikeEvent)="onLikeCount($event)" [blog]="blog"></app-blog-post>
-    </div>
-  </div>
+  <label for="">Type Password</label>
+  <input type="password" class="mt-5" #pwStrength="passwordStrength" appPasswordStrength>
+  <div *ngIf="pwStrength.passwordStrength" id="password-strength" class="strength-{{pwStrength.passwordStrength}}"><span></span></div>
 </div>
-
-<app-child></app-child>
+<p></p>
 <router-outlet />
