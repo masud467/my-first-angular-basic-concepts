@@ -1,49 +1,60 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  font-family: 'Raleway', sans-serif;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.mt-5 {
-  margin-top: 5px;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
 }
 
-#password-strength{
-  background-color:#ccc;
-  height: 5px;
-  width: 100%;
-  display: block;
-  width: 175px;
-  margin-top: 10px;
-
+h1 {
+  margin: 0;
+  font-size: 36px;
 }
 
-#password-strength span {
-  display: block;
-  height: 5px;
-  border-radius: 2px;
-  transition: all 500ms ease;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.strength-1 span { 
-  /* weak password */
-  background-color: red;
-  width: 10%;
+nav li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-.strength-2 span {
-  /* medium password */
-  background-color: orange;
-  width: 25%;
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+footer {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
 }
 
 
+.nav-item a {
+  color: black!important;
+  font-weight: bold;
+}
 
-.strength-3 span {
-  /* strong password */
-  background-color: green;
-  width: 100%;
+.nav-item .active  {
+  color: blue!important;
 }
