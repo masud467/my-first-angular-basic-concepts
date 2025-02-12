@@ -1,0 +1,9 @@
+.error-message {
+  padding: 3px;
+  margin-top: -27px;
+}
+
+.error-message span {
+  color: #d51224;
+  font-size: 12px;
+}

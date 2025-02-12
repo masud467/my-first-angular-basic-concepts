@@ -1,0 +1,74 @@
+<div class="container my-5">
+
+  <!-- Section -->
+  <section>
+
+
+
+
+    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">portfolio</h6>
+    <h3 class="font-weight-bold text-center dark-grey-text pb-2">Product Designs</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5">You can find several product design by our professional team in
+      this section.</p>
+
+
+    <!--First row-->
+
+    <!--Tab panels-->
+    <div class="tab-content mb-5">
+
+      <!--Panel 1-->
+      <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-12 col-lg-3"  *ngFor="let product of Products$ | async">
+
+
+     
+
+            <!-- Card -->
+            <a class="card hoverable mb-4 " data-toggle="modal" [routerLink]="['details',product?.id]"
+             >
+
+              <!-- Card image -->
+              <img class="card-img-top" [src]="product?.image" alt="Card image cap">
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <h5 class="my-3">{{product.title}}</h5>
+                <p class="card-text text-uppercase mb-3">{{  product?.category}}</p>
+
+              </div>
+
+            </a>
+            <!-- Card -->
+
+
+
+
+
+
+          </div>
+          <!-- Grid column -->
+
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!--Panel 1-->
+
+
+
+    </div>
+    <!--Tab panels-->
+
+  </section>
+  <!-- Section -->
+
+</div>

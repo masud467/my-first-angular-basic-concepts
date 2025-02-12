@@ -57,4 +57,5 @@ footer {
 
 .nav-item .active  {
   color: blue!important;
+  text-decoration: underline;
 }
