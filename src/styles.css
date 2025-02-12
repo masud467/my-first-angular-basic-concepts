@@ -214,3 +214,6 @@ a.ssolink {
 .tans4s {
   animation: animationLeftRight 4s ease-in-out infinite;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
